@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="CareHome.view.AuditLogViewController"
+      spacing="10" style="-fx-padding: 20;">
+
+    <TableView fx:id="auditTable" prefHeight="400">
+        <columns>
+            <TableColumn fx:id="entryIdCol" text="Entry ID" prefWidth="100"/>
+            <TableColumn fx:id="staffIdCol" text="Staff ID" prefWidth="100"/>
+            <TableColumn fx:id="actionTypeCol" text="Action" prefWidth="100"/>
+            <TableColumn fx:id="targetIdCol" text="Target ID" prefWidth="100"/>
+            <TableColumn fx:id="detailsCol" text="Details" prefWidth="250"/>
+            <TableColumn fx:id="timestampCol" text="Timestamp" prefWidth="200"/>
+        </columns>
+    </TableView>
+</VBox>

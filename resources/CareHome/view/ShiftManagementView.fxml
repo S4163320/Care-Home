@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="CareHome.view.ShiftManagementController" spacing="10" style="-fx-padding: 10;">
+    <children>
+        <Label text="Shift Management" style="-fx-font-size: 16; -fx-font-weight: bold;"/>
+        <TableView fx:id="shiftTable" prefHeight="200">
+            <columns>
+                <TableColumn fx:id="staffIdColumn" text="Staff ID" prefWidth="100"/>
+                <TableColumn fx:id="dayColumn" text="Day of Week" prefWidth="150"/>
+                <TableColumn fx:id="shiftTypeColumn" text="Shift Type" prefWidth="150"/>
+            </columns>
+        </TableView>
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="Assign New Shift:"/>
+            <ComboBox fx:id="staffComboBox" promptText="Select Staff"/>
+            <ComboBox fx:id="dayComboBox" promptText="Select Day"/>
+            <ComboBox fx:id="shiftTypeComboBox" promptText="Select Shift Type"/>
+            <Button text="Assign" onAction="#handleAssignShift"/>
+        </HBox>
+    </children>
+</VBox>

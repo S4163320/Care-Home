@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1"
+            xmlns="http://javafx.com/javafx/17"
+            fx:controller="CareHome.view.PatientInfoController"
+            prefWidth="800" prefHeight="600">
+
+    <top>
+        <VBox spacing="10" BorderPane.alignment="TOP_CENTER">
+            <padding>
+                <Insets top="15" right="15" bottom="10" left="15"/>
+            </padding>
+            <Label text="Patient Information" style="-fx-font-size:18; -fx-font-weight:bold;" />
+        </VBox>
+    </top>
+
+    <center>
+        <VBox spacing="10">
+            <padding>
+                <Insets top="10" right="15" bottom="10" left="15"/>
+            </padding>
+
+            <TableView fx:id="patientTable" prefHeight="500">
+                <columns>
+                    <TableColumn fx:id="patientIdColumn" text="Patient ID" prefWidth="100"/>
+                    <TableColumn fx:id="firstNameColumn" text="First Name" prefWidth="100"/>
+                    <TableColumn fx:id="lastNameColumn" text="Last Name" prefWidth="100"/>
+                    <TableColumn fx:id="genderColumn" text="Gender" prefWidth="80"/>
+                    <TableColumn fx:id="ageColumn" text="Age" prefWidth="60"/>
+                    <TableColumn fx:id="admissionDateColumn" text="Admission Date" prefWidth="120"/>
+                    <TableColumn fx:id="isolationColumn" text="Needs Isolation" prefWidth="120"/>
+                    <TableColumn fx:id="bedIdColumn" text="Bed ID" prefWidth="100"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox spacing="10" alignment="CENTER_RIGHT" BorderPane.alignment="BOTTOM_CENTER">
+            <padding>
+                <Insets top="10" right="15" bottom="15" left="15"/>
+            </padding>
+            <Button text="Refresh" onAction="#handleRefresh"/>
+            <Button text="Close" onAction="#handleClose"/>
+        </HBox>
+    </bottom>
+</BorderPane>

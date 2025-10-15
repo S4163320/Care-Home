@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="CareHome.view.LoginController"
+      alignment="CENTER" spacing="15.0" style="-fx-padding: 20;">
+
+    <children>
+        <Label text="Care Home Login" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+        <TextField fx:id="usernameField" promptText="Username" maxWidth="200"/>
+        <PasswordField fx:id="passwordField" promptText="Password" maxWidth="200"/>
+        <Button text="Login" onAction="#handleLogin"/>
+        <Label fx:id="errorLabel" textFill="red"/>
+    </children>
+</VBox>

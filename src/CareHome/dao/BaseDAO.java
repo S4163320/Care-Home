@@ -1,0 +1,12 @@
+package CareHome.dao;
+
+import java.util.List;
+
+public interface BaseDAO<T, ID> {
+    void save(T entity) throws Exception;
+    T findById(ID id) throws Exception;
+    List<T> findAll() throws Exception;
+    void update(T entity) throws Exception;
+    void delete(ID id) throws Exception;
+}
+

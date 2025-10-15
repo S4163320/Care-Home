@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.layout.HBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="CareHome.view.WardViewController" spacing="25" style="-fx-padding: 25; -fx-background-color: #FAFAFA;" prefWidth="750" prefHeight="550">
+    <children>
+        <!-- Title -->
+        <Label text="Ward Overview" style="-fx-font-weight: bold;">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+
+        <!-- Wards Container -->
+        <HBox spacing="50" alignment="TOP_LEFT">
+            <children>
+                <!-- Ward 1 (BIG BOX) -->
+                <VBox spacing="12">
+                    <Label text="Ward 1" style="-fx-font-weight: bold; -fx-font-size: 18px;"/>
+                    <GridPane fx:id="ward1Grid" hgap="15" vgap="15" prefWidth="420" prefHeight="620">
+                        <padding>
+                            <Insets top="10" right="10" bottom="10" left="10"/>
+                        </padding>
+                    </GridPane>
+                </VBox>
+
+                <!-- Ward 2 (BIG BOX) - Same structure as Ward 1 -->
+                <VBox spacing="12">
+                    <Label text="Ward 2" style="-fx-font-weight: bold; -fx-font-size: 18px;"/>
+                    <GridPane fx:id="ward2Grid" hgap="15" vgap="15" prefWidth="420" prefHeight="620">
+                        <padding>
+                            <Insets top="10" right="10" bottom="10" left="10"/>
+                        </padding>
+                    </GridPane>
+                </VBox>
+            </children>
+        </HBox>
+    </children>
+</VBox>

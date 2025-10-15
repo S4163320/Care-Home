@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="CareHome.view.AddPrescriptionController" prefWidth="500" prefHeight="500">
+    <children>
+        <VBox spacing="10" alignment="TOP_LEFT" layoutX="20" layoutY="20" prefWidth="460" prefHeight="460">
+            <children>
+                <Label text="Select Patient:"/>
+                <ComboBox fx:id="patientComboBox" promptText="Choose a patient"/>
+
+                <Label text="Prescription Date:"/>
+                <DatePicker fx:id="prescriptionDatePicker"/>
+
+                <Label text="Medication:"/>
+                <TextField fx:id="medicationField"/>
+
+                <Label text="Dosage:"/>
+                <TextField fx:id="dosageField"/>
+
+                <Label text="Frequency:"/>
+                <TextField fx:id="frequencyField"/>
+
+                <Label text="Instructions (optional):"/>
+                <TextArea fx:id="instructionsArea" prefRowCount="3"/>
+
+                <Label fx:id="errorLabel" textFill="red"/>
+
+                <HBox spacing="20">
+                    <Button text="Add Prescription" onAction="#handleAddPrescription"/>
+                    <Button text="Cancel" onAction="#handleClose"/>
+                </HBox>
+            </children>
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+        </VBox>
+    </children>
+</AnchorPane>

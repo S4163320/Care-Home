@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="CareHome.view.PatientViewController" spacing="10" style="-fx-padding: 10;">
+    <children>
+        <Label text="Patient List" style="-fx-font-size: 16; -fx-font-weight: bold;"/>
+        <ListView fx:id="patientListView"/>
+        <Label fx:id="emptyLabel"/>
+        <HBox alignment="CENTER_RIGHT" spacing="10">
+            <Button fx:id="moveButton" text="Move Patient" onAction="#handleMovePatient"/>
+            <Button fx:id="dischargeButton" text="Discharge Selected" onAction="#handleDischarge"/>
+        </HBox>
+    </children>
+</VBox>

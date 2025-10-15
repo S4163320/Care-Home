@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.StackPane?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="CareHome.view.NurseDashboardController">
+
+    <top>
+        <ToolBar>
+            <Label text="Nurse Dashboard" style="-fx-font-size: 16; -fx-font-weight: bold;" />
+            <Pane HBox.hgrow="ALWAYS" />
+            <Button text="Logout" onAction="#handleLogout"/>
+        </ToolBar>
+    </top>
+
+    <center>
+        <StackPane>
+            <VBox spacing="10" alignment="CENTER" style="-fx-padding: 20;" maxWidth="300">
+                <Button text="View Wards" onAction="#handleViewWards" prefWidth="200"/>
+                <Button text="Patients Information" onAction="#handleInfoPatients" prefWidth="200"/>
+                <Button text="Manage Patients" onAction="#handleManagePatients" prefWidth="200"/>
+                <Button text="Administer Medication" onAction="#handleViewPrescriptions" prefWidth="200"/>
+
+            </VBox>
+        </StackPane>
+    </center>
+</BorderPane>
