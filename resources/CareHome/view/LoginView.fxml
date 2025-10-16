@@ -15,5 +15,9 @@
         <PasswordField fx:id="passwordField" promptText="Password" maxWidth="200"/>
         <Button text="Login" onAction="#handleLogin"/>
         <Label fx:id="errorLabel" textFill="red"/>
+        
+        <Label text="manager / pass123" style="-fx-text-fill: grey; -fx-padding: 10 0 0 0;"/>
+        <Label text="doctor / pass123" style="-fx-text-fill: grey;"/>
+        <Label text="nurse / pass123" style="-fx-text-fill: grey;"/>
     </children>
 </VBox>
